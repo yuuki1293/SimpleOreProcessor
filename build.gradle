@@ -29,6 +29,15 @@ subprojects {
         // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
         // See https://docs.gradle.org/current/userguide/declaring_repositories.html
         // for more information about repositories.
+        maven {
+            name = "kotori316"
+            url = uri("https://maven.kotori316.com")
+            content {
+                includeModule("org.typelevel", "cats-core_3")
+                includeModule("org.typelevel", "cats-kernel_3")
+                includeModule("org.typelevel", "cats-free_3")
+            }
+        }
     }
 
     dependencies {
@@ -37,6 +46,9 @@ subprojects {
             it.mappings("net.fabricmc:yarn:$rootProject.yarn_mappings:v2")
             it.mappings("dev.architectury:yarn-mappings-patch-neoforge:$rootProject.yarn_mappings_patch_neoforge_version")
         }
+
+        compileOnly(group: 'org.scala-lang', name: 'scala3-library_3', version: '3.5.0')
+        compileOnly(group: 'org.typelevel', name: 'cats-core_3', version: '2.12.1-kotori')
     }
 
     java {
