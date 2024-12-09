@@ -47,8 +47,8 @@ subprojects {
             it.mappings("dev.architectury:yarn-mappings-patch-neoforge:$rootProject.yarn_mappings_patch_neoforge_version")
         }
 
-        compileOnly(group: 'org.scala-lang', name: 'scala3-library_3', version: '3.5.0')
-        compileOnly(group: 'org.typelevel', name: 'cats-core_3', version: '2.12.1-kotori')
+        compileOnly(group: 'org.scala-lang', name: 'scala3-library_3', version: scala_lib_version)
+        compileOnly(group: 'org.typelevel', name: 'cats-core_3', version: cats_core_version)
     }
 
     java {

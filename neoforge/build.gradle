@@ -47,7 +47,7 @@ dependencies {
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
 
-    runtimeOnly(group: "com.kotori316", name: "ScalableCatsForce-neoforge".toLowerCase(), version: "3.5.1-build-2", classifier: "with-library") {
+    runtimeOnly(group: "com.kotori316", name: "ScalableCatsForce-neoforge".toLowerCase(), version: slp_neoforge_version, classifier: "with-library") {
         transitive(false)
     }
 }
